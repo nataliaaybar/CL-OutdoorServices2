@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Excavation | C.L. Outdoor Services – Cumberland, RI</title>
+  <meta name="description" content="Professional excavation services in Cumberland, RI including regrading, trenching, land clearing, and drainage solutions by C.L. Outdoor Services." />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand"><img src="../Logo.png" alt="C.L. Outdoor Services" /></div>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)">Landscaping &#9660;</a>
+        <ul class="dropdown-menu">
+          <li><a href="../landscaping/lawn-maintenance.html">Lawn Maintenance</a></li>
+          <li><a href="../landscaping/mulching.html">Mulching</a></li>
+          <li><a href="../landscaping/cleanups.html">Spring / Fall Clean Ups</a></li>
+          <li><a href="../landscaping/extra-lawn-care.html">Extra Lawn Care</a></li>
+          <li><a href="../landscaping/pruning.html">Pruning</a></li>
+          <li><a href="../landscaping/snow-removal.html">Snow Removal</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="active">Construction &#9660;</a>
+        <ul class="dropdown-menu">
+          <li><a href="hardscape.html">Hardscape</a></li>
+          <li><a href="excavation.html" class="active">Excavation</a></li>
+          <li><a href="lawn-install.html">Lawn Install</a></li>
+          <li><a href="flat-work.html">Flat Work</a></li>
+          <li><a href="demolition.html">Demolition</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="page-content">
+    <div class="service-header">
+      <h2>Excavation</h2>
+      <p class="service-subtitle">Ground-Level Work Done Right</p>
+    </div>
+
+    <p class="service-description">From leveling a sloped yard to clearing land for a new project, our excavation services handle the heavy work with precision. We prepare your site correctly from the start so everything built on top lasts.</p>
+
+    <div class="service-features">
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Regrading</h3>
+          <p>We reshape existing grades to correct drainage issues, level uneven ground, and prepare your yard for new landscaping or construction.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Finish Grading</h3>
+          <p>Precise final grading to achieve smooth, even surfaces ready for seeding, sodding, paving, or other finishing work.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Rough Grading</h3>
+          <p>Initial bulk grading to establish the overall slope and elevation of a site before finish work begins.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Trenching</h3>
+          <p>Precise trenching for utilities, drainage lines, irrigation systems, and other underground installations.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Land Clearing</h3>
+          <p>Removal of brush, overgrowth, stumps, and debris to prepare raw land for construction or landscaping projects.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Drainage Solutions</h3>
+          <p>We assess and resolve drainage problems with grading corrections, French drains, and other site-specific solutions to keep water moving away from your property.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-gallery service-gallery--single">
+      <div class="gallery-slot">
+        <img src="./Excavation1.png" alt="Excavation and grading in Cumberland RI" />
+      </div>
+    </div>
+
+    <div class="service-cta">
+      <p>Have a site that needs expert ground work?</p>
+      <a href="../contact.html" class="btn-estimate">Get a Free Estimate</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-brand">C.L. Outdoor Services</p>
+      <p>Cumberland, RI</p>
+      <p><a href="tel:4012610181">(401) 261-0181</a></p>
+      <p><a href="mailto:cassonlewis24@gmail.com">cassonlewis24@gmail.com</a></p>
+    </div>
+    <p class="footer-copy">&copy; 2026 C.L. Outdoor Services. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.dropdown > a').forEach(function(toggle) {
+      toggle.addEventListener('click', function() {
+        var parent = this.closest('.dropdown');
+        var isOpen = parent.classList.contains('open');
+        document.querySelectorAll('.dropdown').forEach(function(d) { d.classList.remove('open'); });
+        if (!isOpen) parent.classList.add('open');
+      });
+    });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown') && !e.target.closest('.nav-toggle')) {
+        document.querySelectorAll('.dropdown').forEach(function(d) { d.classList.remove('open'); });
+      }
+      if (!e.target.closest('.navbar')) {
+        document.querySelector('.nav-links').classList.remove('nav-open');
+      }
+    });
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>

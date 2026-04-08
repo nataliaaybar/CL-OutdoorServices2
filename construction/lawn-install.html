@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lawn Install | C.L. Outdoor Services – Cumberland, RI</title>
+  <meta name="description" content="Complete lawn installation services in Cumberland, RI including yard stripping, regrading, loam installation, hydroseeding, and sod by C.L. Outdoor Services." />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand"><img src="../Logo.png" alt="C.L. Outdoor Services" /></div>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)">Landscaping &#9660;</a>
+        <ul class="dropdown-menu">
+          <li><a href="../landscaping/lawn-maintenance.html">Lawn Maintenance</a></li>
+          <li><a href="../landscaping/mulching.html">Mulching</a></li>
+          <li><a href="../landscaping/cleanups.html">Spring / Fall Clean Ups</a></li>
+          <li><a href="../landscaping/extra-lawn-care.html">Extra Lawn Care</a></li>
+          <li><a href="../landscaping/pruning.html">Pruning</a></li>
+          <li><a href="../landscaping/snow-removal.html">Snow Removal</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="active">Construction &#9660;</a>
+        <ul class="dropdown-menu">
+          <li><a href="hardscape.html">Hardscape</a></li>
+          <li><a href="excavation.html">Excavation</a></li>
+          <li><a href="lawn-install.html" class="active">Lawn Install</a></li>
+          <li><a href="flat-work.html">Flat Work</a></li>
+          <li><a href="demolition.html">Demolition</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="page-content">
+    <div class="service-header">
+      <h2>Lawn Install</h2>
+      <p class="service-subtitle">A Fresh Start for Your Yard</p>
+    </div>
+
+    <p class="service-description">We strip the existing yard, regrade the ground for proper drainage, install fresh loam, and top it off with either hydroseed or sod — leaving you with a clean, healthy lawn built the right way from the ground up.</p>
+
+    <div class="service-features">
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Yard Stripping</h3>
+          <p>We remove the existing turf, weeds, and debris to give the new lawn a clean, uncontaminated base to grow from.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Regrading</h3>
+          <p>Proper grading ensures water drains away from your home and the lawn surface stays even, preventing puddles and runoff problems.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Fresh Loam Installation</h3>
+          <p>We bring in and spread quality loam to give your new grass a nutrient-rich foundation that supports strong, healthy root development.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Hydroseed or Sod</h3>
+          <p>Choose hydroseeding for a cost-effective solution that establishes a lush lawn over time, or sod for instant, ready-to-use grass coverage.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-gallery">
+      <div class="gallery-slot">
+        <img src="./LawnInstall1.PNG" alt="Lawn install project in Cumberland RI" />
+      </div>
+      <div class="gallery-slot">
+        <img src="./LawnInstall2.JPEG" alt="Fresh loam and hydroseed installation" />
+      </div>
+      <div class="gallery-slot">
+        <img src="./LawnInstall3.PNG" alt="Yard stripping and regrading" />
+      </div>
+      <div class="gallery-slot">
+        <img src="./LawnInstall4.jpg" alt="Completed lawn install with sod" />
+      </div>
+    </div>
+
+    <div class="service-cta">
+      <p>Ready to start fresh with a brand new lawn?</p>
+      <a href="../contact.html" class="btn-estimate">Get a Free Estimate</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-brand">C.L. Outdoor Services</p>
+      <p>Cumberland, RI</p>
+      <p><a href="tel:4012610181">(401) 261-0181</a></p>
+      <p><a href="mailto:cassonlewis24@gmail.com">cassonlewis24@gmail.com</a></p>
+    </div>
+    <p class="footer-copy">&copy; 2026 C.L. Outdoor Services. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.dropdown > a').forEach(function(toggle) {
+      toggle.addEventListener('click', function() {
+        var parent = this.closest('.dropdown');
+        var isOpen = parent.classList.contains('open');
+        document.querySelectorAll('.dropdown').forEach(function(d) { d.classList.remove('open'); });
+        if (!isOpen) parent.classList.add('open');
+      });
+    });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown') && !e.target.closest('.nav-toggle')) {
+        document.querySelectorAll('.dropdown').forEach(function(d) { d.classList.remove('open'); });
+      }
+      if (!e.target.closest('.navbar')) {
+        document.querySelector('.nav-links').classList.remove('nav-open');
+      }
+    });
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demolition | C.L. Outdoor Services – Cumberland, RI</title>
+  <meta name="description" content="Professional demolition services in Cumberland, RI including removal of buildings, sheds, foundations, and full debris disposal by C.L. Outdoor Services." />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand"><img src="../Logo.png" alt="C.L. Outdoor Services" /></div>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)">Landscaping &#9660;</a>
+        <ul class="dropdown-menu">
+          <li><a href="../landscaping/lawn-maintenance.html">Lawn Maintenance</a></li>
+          <li><a href="../landscaping/mulching.html">Mulching</a></li>
+          <li><a href="../landscaping/cleanups.html">Spring / Fall Clean Ups</a></li>
+          <li><a href="../landscaping/extra-lawn-care.html">Extra Lawn Care</a></li>
+          <li><a href="../landscaping/pruning.html">Pruning</a></li>
+          <li><a href="../landscaping/snow-removal.html">Snow Removal</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="active">Construction &#9660;</a>
+        <ul class="dropdown-menu">
+          <li><a href="hardscape.html">Hardscape</a></li>
+          <li><a href="excavation.html">Excavation</a></li>
+          <li><a href="lawn-install.html">Lawn Install</a></li>
+          <li><a href="flat-work.html">Flat Work</a></li>
+          <li><a href="demolition.html" class="active">Demolition</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="page-content">
+    <div class="service-header">
+      <h2>Demolition</h2>
+      <p class="service-subtitle">Clearing the Way for What's Next</p>
+    </div>
+
+    <p class="service-description">We demo existing buildings, sheds, foundations, and more — then remove and dispose of all construction debris so your property is clean and ready for whatever comes next.</p>
+
+    <div class="service-features">
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Building Demolition</h3>
+          <p>Safe, efficient takedown of existing structures including garages, outbuildings, and small commercial buildings.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Shed Removal</h3>
+          <p>Full demolition and removal of old sheds, whether wood, metal, or vinyl — leaving the area clear and level.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Foundation Demolition</h3>
+          <p>Removal of existing concrete or block foundations to prepare a site for new construction or landscaping.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Debris Removal & Disposal</h3>
+          <p>We haul away and properly dispose of all construction debris — no mess left behind.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-gallery service-gallery--single">
+      <div class="gallery-slot">
+        <img src="./Demolition1.JPEG" alt="Demolition and debris removal in Cumberland RI" />
+      </div>
+    </div>
+
+    <div class="service-cta">
+      <p>Have a structure that needs to come down?</p>
+      <a href="../contact.html" class="btn-estimate">Get a Free Estimate</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-brand">C.L. Outdoor Services</p>
+      <p>Cumberland, RI</p>
+      <p><a href="tel:4012610181">(401) 261-0181</a></p>
+      <p><a href="mailto:cassonlewis24@gmail.com">cassonlewis24@gmail.com</a></p>
+    </div>
+    <p class="footer-copy">&copy; 2026 C.L. Outdoor Services. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.dropdown > a').forEach(function(toggle) {
+      toggle.addEventListener('click', function() {
+        var parent = this.closest('.dropdown');
+        var isOpen = parent.classList.contains('open');
+        document.querySelectorAll('.dropdown').forEach(function(d) { d.classList.remove('open'); });
+        if (!isOpen) parent.classList.add('open');
+      });
+    });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown') && !e.target.closest('.nav-toggle')) {
+        document.querySelectorAll('.dropdown').forEach(function(d) { d.classList.remove('open'); });
+      }
+      if (!e.target.closest('.navbar')) {
+        document.querySelector('.nav-links').classList.remove('nav-open');
+      }
+    });
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>

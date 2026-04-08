@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hardscape | C.L. Outdoor Services – Cumberland, RI</title>
+  <meta name="description" content="Professional hardscape installation in Cumberland, RI. C.L. Outdoor Services installs paver walkways, patios, retaining walls, pool decks, and more." />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand"><img src="../Logo.png" alt="C.L. Outdoor Services" /></div>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)">Landscaping &#9660;</a>
+        <ul class="dropdown-menu">
+          <li><a href="../landscaping/lawn-maintenance.html">Lawn Maintenance</a></li>
+          <li><a href="../landscaping/mulching.html">Mulching</a></li>
+          <li><a href="../landscaping/cleanups.html">Spring / Fall Clean Ups</a></li>
+          <li><a href="../landscaping/extra-lawn-care.html">Extra Lawn Care</a></li>
+          <li><a href="../landscaping/pruning.html">Pruning</a></li>
+          <li><a href="../landscaping/snow-removal.html">Snow Removal</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="active">Construction &#9660;</a>
+        <ul class="dropdown-menu">
+          <li><a href="hardscape.html" class="active">Hardscape</a></li>
+          <li><a href="excavation.html">Excavation</a></li>
+          <li><a href="lawn-install.html">Lawn Install</a></li>
+          <li><a href="flat-work.html">Flat Work</a></li>
+          <li><a href="demolition.html">Demolition</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="page-content">
+    <div class="service-header">
+      <h2>Hardscape</h2>
+      <p class="service-subtitle">Custom Outdoor Builds That Last</p>
+    </div>
+
+    <p class="service-description">Transform your outdoor space with professionally installed hardscape features. From paver walkways to pool decks, we design and build durable, functional, and beautiful structures that enhance your property for years to come.</p>
+
+    <div class="service-features">
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Paver Walkways</h3>
+          <p>Clean, defined pathways installed with precision — connecting areas of your yard with a polished, permanent finish.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Patios</h3>
+          <p>Custom paver patios built to your space and style, creating the perfect outdoor area for relaxing and entertaining.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Retaining Walls</h3>
+          <p>Structurally sound retaining walls that manage slope, prevent erosion, and add dimension to your landscape.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Pool Decks &amp; More</h3>
+          <p>Pool surrounds, steps, borders, and other custom hardscape features tailored to your outdoor vision.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-gallery service-gallery--single">
+      <div class="gallery-slot">
+        <img src="./Hardscape2.jpg" alt="Retaining wall and walkway construction" />
+      </div>
+    </div>
+
+    <div class="service-gallery">
+      <div class="gallery-slot">
+        <img src="./Hardscape1.jpg" alt="Paver patio installation in Cumberland RI" />
+      </div>
+      <div class="gallery-slot">
+        <img src="./Hardscape3.jpg" alt="Pool deck hardscape project" />
+      </div>
+    </div>
+
+    <div class="service-cta">
+      <p>Ready to build something that lasts?</p>
+      <a href="../contact.html" class="btn-estimate">Get a Free Estimate</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-brand">C.L. Outdoor Services</p>
+      <p>Cumberland, RI</p>
+      <p><a href="tel:4012610181">(401) 261-0181</a></p>
+      <p><a href="mailto:cassonlewis24@gmail.com">cassonlewis24@gmail.com</a></p>
+    </div>
+    <p class="footer-copy">&copy; 2026 C.L. Outdoor Services. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.dropdown > a').forEach(function(toggle) {
+      toggle.addEventListener('click', function() {
+        var parent = this.closest('.dropdown');
+        var isOpen = parent.classList.contains('open');
+        document.querySelectorAll('.dropdown').forEach(function(d) { d.classList.remove('open'); });
+        if (!isOpen) parent.classList.add('open');
+      });
+    });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown') && !e.target.closest('.nav-toggle')) {
+        document.querySelectorAll('.dropdown').forEach(function(d) { d.classList.remove('open'); });
+      }
+      if (!e.target.closest('.navbar')) {
+        document.querySelector('.nav-links').classList.remove('nav-open');
+      }
+    });
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>

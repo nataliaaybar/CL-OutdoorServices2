@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flat Work | C.L. Outdoor Services – Cumberland, RI</title>
+  <meta name="description" content="Professional concrete and asphalt flat work in Cumberland, RI including slabs, walkways, driveways, parking lots, and asphalt patchwork by C.L. Outdoor Services." />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand"><img src="../Logo.png" alt="C.L. Outdoor Services" /></div>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)">Landscaping &#9660;</a>
+        <ul class="dropdown-menu">
+          <li><a href="../landscaping/lawn-maintenance.html">Lawn Maintenance</a></li>
+          <li><a href="../landscaping/mulching.html">Mulching</a></li>
+          <li><a href="../landscaping/cleanups.html">Spring / Fall Clean Ups</a></li>
+          <li><a href="../landscaping/extra-lawn-care.html">Extra Lawn Care</a></li>
+          <li><a href="../landscaping/pruning.html">Pruning</a></li>
+          <li><a href="../landscaping/snow-removal.html">Snow Removal</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="active">Construction &#9660;</a>
+        <ul class="dropdown-menu">
+          <li><a href="hardscape.html">Hardscape</a></li>
+          <li><a href="excavation.html">Excavation</a></li>
+          <li><a href="lawn-install.html">Lawn Install</a></li>
+          <li><a href="flat-work.html" class="active">Flat Work</a></li>
+          <li><a href="demolition.html">Demolition</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="page-content">
+    <div class="service-header">
+      <h2>Flat Work</h2>
+      <p class="service-subtitle">Concrete & Asphalt Done Clean</p>
+    </div>
+
+    <p class="service-description">From finished concrete slabs and walkways to asphalt driveways and parking lots, we handle all types of flat work with clean, durable results. We also offer asphalt patchwork and pothole filling to restore existing surfaces.</p>
+
+    <div class="service-features">
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Concrete Slabs</h3>
+          <p>We pour and finish concrete slabs for patios, garage floors, shed pads, and more — smooth, level, and built to last.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Concrete Walkways</h3>
+          <p>Custom concrete walkways that are functional, clean-looking, and designed to complement your property's layout.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Asphalt Driveways & Walkways</h3>
+          <p>New asphalt installations for driveways and walkways — properly graded and compacted for a smooth, long-lasting surface.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Parking Lots</h3>
+          <p>Full asphalt parking lot installation for commercial and residential properties, including grading and drainage planning.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Asphalt Patchwork</h3>
+          <p>We repair cracked, crumbling, or damaged asphalt sections with clean patches that blend into the existing surface.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Pothole Filling</h3>
+          <p>Fast, effective pothole repair to restore driveways and lots to a safe, even surface and prevent further damage.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-gallery">
+      <div class="gallery-slot">
+        <img src="./FlatWork1.JPEG" alt="Concrete slab and flat work in Cumberland RI" />
+      </div>
+      <div class="gallery-slot">
+        <img src="./FlatWork2.jpg" alt="Asphalt driveway installation" />
+      </div>
+    </div>
+
+    <div class="service-cta">
+      <p>Need a driveway, slab, or surface repaired?</p>
+      <a href="../contact.html" class="btn-estimate">Get a Free Estimate</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-brand">C.L. Outdoor Services</p>
+      <p>Cumberland, RI</p>
+      <p><a href="tel:4012610181">(401) 261-0181</a></p>
+      <p><a href="mailto:cassonlewis24@gmail.com">cassonlewis24@gmail.com</a></p>
+    </div>
+    <p class="footer-copy">&copy; 2026 C.L. Outdoor Services. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.dropdown > a').forEach(function(toggle) {
+      toggle.addEventListener('click', function() {
+        var parent = this.closest('.dropdown');
+        var isOpen = parent.classList.contains('open');
+        document.querySelectorAll('.dropdown').forEach(function(d) { d.classList.remove('open'); });
+        if (!isOpen) parent.classList.add('open');
+      });
+    });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown') && !e.target.closest('.nav-toggle')) {
+        document.querySelectorAll('.dropdown').forEach(function(d) { d.classList.remove('open'); });
+      }
+      if (!e.target.closest('.navbar')) {
+        document.querySelector('.nav-links').classList.remove('nav-open');
+      }
+    });
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>

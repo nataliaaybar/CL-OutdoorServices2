@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lawn Maintenance | C.L. Outdoor Services – Cumberland, RI</title>
+  <meta name="description" content="Professional weekly and bi-weekly lawn maintenance in Cumberland, RI. Services include mowing, weed whacking, and final blow down by C.L. Outdoor Services." />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand"><img src="../Logo.png" alt="C.L. Outdoor Services" /></div>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="active">Landscaping &#9660;</a>
+        <ul class="dropdown-menu">
+          <li><a href="lawn-maintenance.html" class="active">Lawn Maintenance</a></li>
+          <li><a href="mulching.html">Mulching</a></li>
+          <li><a href="cleanups.html">Spring / Fall Clean Ups</a></li>
+          <li><a href="extra-lawn-care.html">Extra Lawn Care</a></li>
+          <li><a href="pruning.html">Pruning</a></li>
+          <li><a href="snow-removal.html">Snow Removal</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)">Construction &#9660;</a>
+        <ul class="dropdown-menu">
+          <li><a href="../construction/hardscape.html">Hardscape</a></li>
+          <li><a href="../construction/excavation.html">Excavation</a></li>
+          <li><a href="../construction/lawn-install.html">Lawn Install</a></li>
+          <li><a href="../construction/flat-work.html">Flat Work</a></li>
+          <li><a href="../construction/demolition.html">Demolition</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="page-content">
+    <div class="service-header">
+      <h2>Lawn Maintenance</h2>
+      <p class="service-subtitle">Weekly &amp; Bi-Weekly Schedules Available</p>
+    </div>
+
+    <p class="service-description">Keep your lawn looking its best all season long. Our lawn maintenance service covers everything your yard needs — clean cuts, crisp edges, and a polished finish every visit.</p>
+
+    <div class="service-features">
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Mowing</h3>
+          <p>Precision cutting at the right height to promote healthy grass growth and a clean, even appearance.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Weed Whacking</h3>
+          <p>Trimming along fences, walkways, driveways, and tight areas that the mower can't reach.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Final Blow Down</h3>
+          <p>Every visit ends with a thorough blow down of all clippings from driveways, walkways, and hard surfaces — leaving your property spotless.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-gallery">
+      <div class="gallery-slot">
+        <img src="./LawnMaintenance.jpg" alt="Lawn maintenance in Cumberland RI" />
+      </div>
+      <div class="gallery-slot">
+        <img src="./LawnMaintenance2.png" alt="Lawn mowing and weed whacking" />
+      </div>
+    </div>
+
+    <div class="service-cta">
+      <p>Ready for a lawn you're proud of?</p>
+      <a href="../contact.html" class="btn-estimate">Get a Free Estimate</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-brand">C.L. Outdoor Services</p>
+      <p>Cumberland, RI</p>
+      <p><a href="tel:4012610181">(401) 261-0181</a></p>
+      <p><a href="mailto:cassonlewis24@gmail.com">cassonlewis24@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.dropdown > a').forEach(function(toggle) {
+      toggle.addEventListener('click', function() {
+        var parent = this.closest('.dropdown');
+        var isOpen = parent.classList.contains('open');
+        document.querySelectorAll('.dropdown').forEach(function(d) { d.classList.remove('open'); });
+        if (!isOpen) parent.classList.add('open');
+      });
+    });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown') && !e.target.closest('.nav-toggle')) {
+        document.querySelectorAll('.dropdown').forEach(function(d) { d.classList.remove('open'); });
+      }
+      if (!e.target.closest('.navbar')) {
+        document.querySelector('.nav-links').classList.remove('nav-open');
+      }
+    });
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>

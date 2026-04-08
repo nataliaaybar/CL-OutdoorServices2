@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snow Removal | C.L. Outdoor Services – Cumberland, RI</title>
+  <meta name="description" content="Reliable snow removal services in Cumberland, RI including plowing, salting, and walkway clearing by C.L. Outdoor Services." />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand"><img src="../Logo.png" alt="C.L. Outdoor Services" /></div>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="active">Landscaping &#9660;</a>
+        <ul class="dropdown-menu">
+          <li><a href="lawn-maintenance.html">Lawn Maintenance</a></li>
+          <li><a href="mulching.html">Mulching</a></li>
+          <li><a href="cleanups.html">Spring / Fall Clean Ups</a></li>
+          <li><a href="extra-lawn-care.html">Extra Lawn Care</a></li>
+          <li><a href="pruning.html">Pruning</a></li>
+          <li><a href="snow-removal.html" class="active">Snow Removal</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)">Construction &#9660;</a>
+        <ul class="dropdown-menu">
+          <li><a href="../construction/hardscape.html">Hardscape</a></li>
+          <li><a href="../construction/excavation.html">Excavation</a></li>
+          <li><a href="../construction/lawn-install.html">Lawn Install</a></li>
+          <li><a href="../construction/flat-work.html">Flat Work</a></li>
+          <li><a href="../construction/demolition.html">Demolition</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="page-content">
+    <div class="service-header">
+      <h2>Snow Removal</h2>
+      <p class="service-subtitle">Keeping Your Property Clear All Winter</p>
+    </div>
+
+    <p class="service-description">When the snow hits, we've got you covered. We offer reliable residential and commercial snow removal throughout Cumberland, RI and surrounding areas — so your driveway, walkways, and property are safe and accessible after every storm.</p>
+
+    <div class="service-features">
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Driveway Plowing</h3>
+          <p>Fast, thorough plowing of residential and commercial driveways after every snowfall, so you can get in and out without delay.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Walkway & Step Clearing</h3>
+          <p>We shovel and clear all walkways, steps, and entry points to keep your property safe and accessible.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Salting & De-Icing</h3>
+          <p>Salt and de-icing treatment applied to driveways and walkways to prevent ice buildup and reduce slip hazards.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Lot Clearing</h3>
+          <p>Full-lot snow clearing for commercial properties and parking areas, keeping your business accessible through every storm.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-gallery">
+      <div class="gallery-slot">
+        <img src="./SnowRemoval1.jpg" alt="Snow removal and plowing in Cumberland RI" />
+      </div>
+      <div class="gallery-slot">
+        <img src="./SnowRemoval2.jpg" alt="Driveway snow plowing service" />
+      </div>
+    </div>
+
+    <div class="service-cta">
+      <p>Ready to get on the plow list this winter?</p>
+      <a href="../contact.html" class="btn-estimate">Get a Free Estimate</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-brand">C.L. Outdoor Services</p>
+      <p>Cumberland, RI</p>
+      <p><a href="tel:4012610181">(401) 261-0181</a></p>
+      <p><a href="mailto:cassonlewis24@gmail.com">cassonlewis24@gmail.com</a></p>
+    </div>
+    <p class="footer-copy">&copy; 2026 C.L. Outdoor Services. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.dropdown > a').forEach(function(toggle) {
+      toggle.addEventListener('click', function() {
+        var parent = this.closest('.dropdown');
+        var isOpen = parent.classList.contains('open');
+        document.querySelectorAll('.dropdown').forEach(function(d) { d.classList.remove('open'); });
+        if (!isOpen) parent.classList.add('open');
+      });
+    });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown') && !e.target.closest('.nav-toggle')) {
+        document.querySelectorAll('.dropdown').forEach(function(d) { d.classList.remove('open'); });
+      }
+      if (!e.target.closest('.navbar')) {
+        document.querySelector('.nav-links').classList.remove('nav-open');
+      }
+    });
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>

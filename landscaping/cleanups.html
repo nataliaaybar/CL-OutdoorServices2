@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spring & Fall Clean Ups | C.L. Outdoor Services – Cumberland, RI</title>
+  <meta name="description" content="Professional spring and fall yard clean ups in Cumberland, RI. C.L. Outdoor Services removes sticks, leaves, and debris to keep your property clean year-round." />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand"><img src="../Logo.png" alt="C.L. Outdoor Services" /></div>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="active">Landscaping &#9660;</a>
+        <ul class="dropdown-menu">
+          <li><a href="lawn-maintenance.html">Lawn Maintenance</a></li>
+          <li><a href="mulching.html">Mulching</a></li>
+          <li><a href="cleanups.html" class="active">Spring / Fall Clean Ups</a></li>
+          <li><a href="extra-lawn-care.html">Extra Lawn Care</a></li>
+          <li><a href="pruning.html">Pruning</a></li>
+          <li><a href="snow-removal.html">Snow Removal</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)">Construction &#9660;</a>
+        <ul class="dropdown-menu">
+          <li><a href="../construction/hardscape.html">Hardscape</a></li>
+          <li><a href="../construction/excavation.html">Excavation</a></li>
+          <li><a href="../construction/lawn-install.html">Lawn Install</a></li>
+          <li><a href="../construction/flat-work.html">Flat Work</a></li>
+          <li><a href="../construction/demolition.html">Demolition</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="page-content">
+    <div class="service-header">
+      <h2>Spring &amp; Fall Clean Ups</h2>
+      <p class="service-subtitle">Start &amp; End Every Season Right</p>
+    </div>
+
+    <p class="service-description">Keep your yard looking clean and cared for no matter the season. We handle the full clean up — removing sticks, leaves, and any other yard debris so your property stays tidy from the first thaw to the last leaf fall.</p>
+
+    <div class="service-features">
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Stick &amp; Debris Removal</h3>
+          <p>We clear out fallen branches, sticks, and any scattered debris that builds up over the season.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Leaf Cleanup</h3>
+          <p>Full yard leaf removal — raked, blown, and hauled away so your lawn can breathe and stay healthy.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Complete Yard Cleanup</h3>
+          <p>Any other yard debris is removed as part of the service, leaving your property clean from corner to corner.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-gallery">
+      <div class="gallery-slot">
+        <img src="./Cleanups1.JPEG" alt="Spring yard clean up in Cumberland RI" />
+      </div>
+      <div class="gallery-slot">
+        <img src="./Cleanups2.jpg" alt="Fall leaf cleanup and debris removal" />
+      </div>
+    </div>
+
+    <div class="service-cta">
+      <p>Ready to get your yard cleaned up?</p>
+      <a href="../contact.html" class="btn-estimate">Get a Free Estimate</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-brand">C.L. Outdoor Services</p>
+      <p>Cumberland, RI</p>
+      <p><a href="tel:4012610181">(401) 261-0181</a></p>
+      <p><a href="mailto:cassonlewis24@gmail.com">cassonlewis24@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.dropdown > a').forEach(function(toggle) {
+      toggle.addEventListener('click', function() {
+        var parent = this.closest('.dropdown');
+        var isOpen = parent.classList.contains('open');
+        document.querySelectorAll('.dropdown').forEach(function(d) { d.classList.remove('open'); });
+        if (!isOpen) parent.classList.add('open');
+      });
+    });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown') && !e.target.closest('.nav-toggle')) {
+        document.querySelectorAll('.dropdown').forEach(function(d) { d.classList.remove('open'); });
+      }
+      if (!e.target.closest('.navbar')) {
+        document.querySelector('.nav-links').classList.remove('nav-open');
+      }
+    });
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>

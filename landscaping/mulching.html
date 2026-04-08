@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mulching | C.L. Outdoor Services – Cumberland, RI</title>
+  <meta name="description" content="Professional mulch bed cleanout, edging, and fresh mulch installation in Cumberland, RI by C.L. Outdoor Services." />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand"><img src="../Logo.png" alt="C.L. Outdoor Services" /></div>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="active">Landscaping &#9660;</a>
+        <ul class="dropdown-menu">
+          <li><a href="lawn-maintenance.html">Lawn Maintenance</a></li>
+          <li><a href="mulching.html" class="active">Mulching</a></li>
+          <li><a href="cleanups.html">Spring / Fall Clean Ups</a></li>
+          <li><a href="extra-lawn-care.html">Extra Lawn Care</a></li>
+          <li><a href="pruning.html">Pruning</a></li>
+          <li><a href="snow-removal.html">Snow Removal</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)">Construction &#9660;</a>
+        <ul class="dropdown-menu">
+          <li><a href="../construction/hardscape.html">Hardscape</a></li>
+          <li><a href="../construction/excavation.html">Excavation</a></li>
+          <li><a href="../construction/lawn-install.html">Lawn Install</a></li>
+          <li><a href="../construction/flat-work.html">Flat Work</a></li>
+          <li><a href="../construction/demolition.html">Demolition</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="page-content">
+    <div class="service-header">
+      <h2>Mulching</h2>
+      <p class="service-subtitle">Clean Beds. Sharp Edges. Fresh Mulch.</p>
+    </div>
+
+    <p class="service-description">Give your landscape beds a clean, polished look. We handle everything from start to finish — clearing out the old debris, defining clean edges, and topping it all off with a fresh layer of mulch.</p>
+
+    <div class="service-features">
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Bed Cleanout</h3>
+          <p>We remove old mulch, leaves, weeds, and debris to give your beds a clean foundation before any new material goes down.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Edge Mulch Beds</h3>
+          <p>Crisp, defined edges that separate your beds from the lawn — making the entire yard look sharp and well-maintained.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#9680;</span>
+        <div>
+          <h3>Fresh Mulch Install</h3>
+          <p>We install a fresh, even layer of mulch to retain moisture, suppress weeds, and give your landscape a clean, finished appearance.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-gallery">
+      <div class="gallery-slot">
+        <img src="./Mulching1.png" alt="Mulching services in Cumberland RI" />
+      </div>
+      <div class="gallery-slot">
+        <img src="./Mulching2.png" alt="Mulch bed edging" />
+      </div>
+      <div class="gallery-slot">
+        <img src="./Mulching3.jpg" alt="Fresh mulch installation" />
+      </div>
+      <div class="gallery-slot">
+        <img src="./Mulching4.jpg" alt="Completed mulch bed" />
+      </div>
+    </div>
+
+    <div class="service-video">
+      <video controls playsinline>
+        <source src="./MulchingVideo.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <div class="service-cta">
+      <p>Ready to refresh your landscape beds?</p>
+      <a href="../contact.html" class="btn-estimate">Get a Free Estimate</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-brand">C.L. Outdoor Services</p>
+      <p>Cumberland, RI</p>
+      <p><a href="tel:4012610181">(401) 261-0181</a></p>
+      <p><a href="mailto:cassonlewis24@gmail.com">cassonlewis24@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.dropdown > a').forEach(function(toggle) {
+      toggle.addEventListener('click', function() {
+        var parent = this.closest('.dropdown');
+        var isOpen = parent.classList.contains('open');
+        document.querySelectorAll('.dropdown').forEach(function(d) { d.classList.remove('open'); });
+        if (!isOpen) parent.classList.add('open');
+      });
+    });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown') && !e.target.closest('.nav-toggle')) {
+        document.querySelectorAll('.dropdown').forEach(function(d) { d.classList.remove('open'); });
+      }
+      if (!e.target.closest('.navbar')) {
+        document.querySelector('.nav-links').classList.remove('nav-open');
+      }
+    });
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>
